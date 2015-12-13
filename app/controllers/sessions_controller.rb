@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     
     if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
-      redirect_to root_path, notice: "Logged in. Enjoy your life."
+      redirect_to conversations_index_path, notice: "Logged in. Enjoy your life."
     else
       flash.now.alert = "User name or password incorrect."
       render "new"
