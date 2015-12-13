@@ -1,0 +1,19 @@
+<div class="col-md-6 col-md-offset-3">
+  <div class="container sign_up">
+    <%= simple_form_for @user, html: { class: 'form-vertical' } do |f| %>
+      <div class="form-group">
+        <%= f.input :name, class: "form-control", label: false, placeholder: "Your name", input_html: {class: "form-control"} %>
+      </div>
+      <div class="form-group">
+        <%= f.input :email, label: false, placeholder: "Email address", input_html: {class: 'form-control'} %>
+      </div>
+      <div class="form-group">
+        <%= f.input :password, label: false, placeholder: "Password", input_html: {class: 'form-control' } %>
+      </div>
+      <div class="form-group">
+        <%= f.input :password_confirmation, label: false, placeholder: "Password Confirmation", input_html: {class:"form-control"}%>
+      </div>
+      <%= f.submit "Sign Up", class: "btn btn-block btn-danger" %>
+    <% end %>
+  </div>
+</div>
